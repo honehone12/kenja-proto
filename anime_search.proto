@@ -19,13 +19,13 @@ message Keyword {
 
 message Character {
     optional string name = 1;
-    optional string name_kanji = 2;
+    optional string name_japanese = 2;
 }
 
 message Anime {
-    optional string title = 1;
-    optional string title_english = 2;
-    optional string title_japanese = 3;
+    optional string name = 1;
+    optional string name_english = 2;
+    optional string name_japanese = 3;
 }
 
 message Candidate {
