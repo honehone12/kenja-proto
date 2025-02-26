@@ -10,6 +10,18 @@ message Keyword {
     string keyword = 1;
 }
 
+message Character {
+    optional string name = 1;
+    optional string name_kanji = 2;
+}
+
+message Anime {
+    optional string title = 1;
+    optional string title_english = 2;
+    optional string title_japanese = 3;
+}
+
 message Candidate {
-    string name = 1;
+    Anime anime = 1;
+    repeated Character characters = 2;
 }
