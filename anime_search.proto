@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package kenja;
+
+service AnimeSearch {
+    rpc Search(Keyword) returns (stream Candidate);
+}
+
+message Keyword {
+    string keyword = 1;
+}
+
+message Candidate {
+    string name = 1;
+}
