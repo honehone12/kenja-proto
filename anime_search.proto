@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package kenja;
+package kenja_anime_search;
 
 service AnimeSearch {
     rpc Search(Keyword) returns (stream Candidate);
