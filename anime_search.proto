@@ -18,13 +18,11 @@ message Keyword {
 }
 
 message Parent {
-    int64 mal_id = 1;
     string name = 2;
     optional string name_japanese = 3;
 }
 
 message Candidate {
-    int64 mal_id = 1;
     string url = 2;
     optional Parent parent = 3;
     string name = 4;
