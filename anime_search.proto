@@ -17,18 +17,18 @@ message Keyword {
     Rating rating = 2;
 }
 
-message Character {
-    optional string name = 1;
+message Parent {
+    i64 mal_id = 0;
+    string name = 1;
     optional string name_japanese = 2;
 }
 
-message Anime {
-    optional string name = 1;
-    optional string name_english = 2;
-    optional string name_japanese = 3;
-}
-
 message Candidate {
-    Anime anime = 1;
-    repeated Character characters = 2;
+    i64 mal_id = 0;
+    string url = 1;
+    optional Parent parent = 2;
+    string name = 3;
+    optional string name_english = 4;
+    optional string name_japanese = 5;
+    optional string description = 6;
 }
