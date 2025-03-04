@@ -7,9 +7,9 @@ service AnimeSearch {
 }
 
 enum Rating {
-    RATING_UNSPECIFIED = 0;
-    RATING_ALL_AGES = 1;
-    RATING_HENTAI = 2;
+    UNSPECIFIED = 0;
+    ALL_AGES = 1;
+    HENTAI = 2;
 }
 
 message Keyword {
@@ -18,17 +18,17 @@ message Keyword {
 }
 
 message Parent {
-    i64 mal_id = 0;
-    string name = 1;
-    optional string name_japanese = 2;
+    int64 mal_id = 1;
+    string name = 2;
+    optional string name_japanese = 3;
 }
 
 message Candidate {
-    i64 mal_id = 0;
-    string url = 1;
-    optional Parent parent = 2;
-    string name = 3;
-    optional string name_english = 4;
-    optional string name_japanese = 5;
-    optional string description = 6;
+    int64 mal_id = 1;
+    string url = 2;
+    optional Parent parent = 3;
+    string name = 4;
+    optional string name_english = 5;
+    optional string name_japanese = 6;
+    optional string description = 7;
 }
