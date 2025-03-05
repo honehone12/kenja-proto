@@ -3,7 +3,7 @@ syntax = "proto3";
 package kenja_anime_search;
 
 service AnimeSearch {
-    rpc Search(Keyword) returns (stream Candidate);
+    rpc Search(Query) returns (stream Candidate);
 }
 
 enum Rating {
@@ -12,7 +12,7 @@ enum Rating {
     RATING_HENTAI = 2;
 }
 
-message Keyword {
+message Query {
     string keyword = 1;
     Rating rating = 2;
 }
