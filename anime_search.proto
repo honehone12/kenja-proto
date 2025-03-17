@@ -23,7 +23,7 @@ message Parent {
 }
 
 message Candidate {
-    string url = 1;
+    int64 id = 1; 
     optional Parent parent = 2;
     string name = 3;
     optional string name_english = 4;
