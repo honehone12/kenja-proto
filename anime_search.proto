@@ -17,15 +17,27 @@ message Query {
     Rating rating = 2;
 }
 
+enum DocumentType {
+    DOCUMENT_TYPE_UNSPECIFIED = 0;
+    DOCUMENT_TYPE_ANIME = 1;
+    DOCUMENT_TYPE_CHARACTER = 2;
+}
+
+message ItemId {
+    int64 id = 1;
+    DocumentType document_type = 2;
+}
+
 message Parent {
     string name = 1;
     optional string name_japanese = 2;
 }
 
 message Candidate {
-    int64 id = 1; 
+    ItemId id = 1; 
     optional Parent parent = 2;
-    string name = 3;
-    optional string name_english = 4;
-    optional string name_japanese = 5;
+    repeated string tags = 3;
+    string name = 4;
+    optional string name_english = 5;
+    optional string name_japanese = 6;
 }
