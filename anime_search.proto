@@ -36,8 +36,7 @@ message Parent {
 message Candidate {
     ItemId id = 1; 
     optional Parent parent = 2;
-    repeated string tags = 3;
-    string name = 4;
-    optional string name_english = 5;
-    optional string name_japanese = 6;
+    string name = 3;
+    optional string name_english = 4;
+    optional string name_japanese = 5;
 }
