@@ -17,15 +17,15 @@ message Query {
     Rating rating = 2;
 }
 
-enum DocumentType {
-    DOCUMENT_TYPE_UNSPECIFIED = 0;
-    DOCUMENT_TYPE_ANIME = 1;
-    DOCUMENT_TYPE_CHARACTER = 2;
+enum ItemType {
+    ITEM_TYPE_UNSPECIFIED = 0;
+    ITEM_TYPE_ANIME = 1;
+    ITEM_TYPE_CHARACTER = 2;
 }
 
 message ItemId {
     int64 id = 1;
-    DocumentType document_type = 2;
+    ItemType item_type = 2;
 }
 
 message Parent {
