@@ -24,8 +24,9 @@ enum ItemType {
 }
 
 message Parent {
-    string name = 1;
-    optional string name_japanese = 2;
+    int64 id = 1;
+    string name = 2;
+    optional string name_japanese = 3;
 }
 
 message Candidate {
